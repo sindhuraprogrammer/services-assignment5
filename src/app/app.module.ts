@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { UsersServiceService } from './users-service.service';
+import {CounterService} from './counter.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, ActiveUsersComponent, InactiveUsersComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [UsersServiceService,CounterService]
 })
 export class AppModule { }
